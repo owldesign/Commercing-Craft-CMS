@@ -1,0 +1,33 @@
+{% includeCssResource "commercing/css/style.css" %}
+
+{{ settings.someSetting }}
+
+<section id="commercing">
+	<div class="panel">
+		<h1>$ {{ totalPrice }}</h1>
+		<p>Total sales</p>
+	</div>
+
+	<hr />
+
+	<div class="panel">
+		<h1>{{ popularProduct['product'].getTitle() }}</h1>
+		<p>Most product sold - {{ popularProduct['occurances'] }} sold</p>
+	</div>
+
+	<hr />
+
+	<div class="panel">
+		<h1>{{ ordersProcessing }} Orders</h1>
+		<p>awaiting processing</p>
+	</div>
+
+	<hr />
+
+	<div class="panel">
+		<h1>{{ ordersShipped }} Orders</h1>
+		<p>have shipped</p>
+	</div>
+
+	<hr />
+</section>

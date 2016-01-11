@@ -1,0 +1,61 @@
+{% extends "_layouts/cp" %}
+
+{% set bodyClass = 'commercing c-dashboard' %}
+{% set title = 'Commercing' %}
+
+
+{% block content %}
+  <section id="commercing">
+		
+		<div class="panel">
+			<h2>$ {{ totalPrice }}</h2>
+			<p>Total sales</p>
+		</div>
+
+		<hr />
+
+		<div class="panel">
+			<h2>{{ popularProduct['product'].getTitle() }}</h2>
+			<p>Most product sold - {{ popularProduct['occurances'] }} sold</p>
+		</div>
+
+		<hr />
+
+		<div class="panel">
+			<h2>{{ ordersProcessing }} Orders</h2>
+			<p>awaiting processing</p>
+		</div>
+
+		<hr />
+
+		<div class="panel">
+			<h2>{{ ordersShipped }} Orders</h2>
+			<p>have shipped</p>
+		</div>
+
+		<hr />
+
+		{# <h1>All Orders</h1> #}
+		{# {{ orders |length }} #}
+		{# <h2>Active Carts</h2>
+		{% for order in orders if order.orderStatusId == null %}
+			<p>Order #: {{ order.number }}</p>
+		{% endfor %}
+		
+		<hr />
+		
+		<h2>Processing Orders</h2>
+		{% for order in orders if order.orderStatusId == 1 %}
+			<p>Order #: {{ order.number }}</p>
+		{% endfor %}
+
+		<hr />
+
+		<h2>Shipped Orders</h2>
+		{% for order in orders if order.orderStatusId == 2 %}
+			<p>Order #: {{ order.number }}</p>
+		{% endfor %} #}
+
+			{# {{ order |inspect }} #}
+  </section>
+{% endblock %}
