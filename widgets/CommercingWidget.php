@@ -109,7 +109,7 @@ class CommercingWidget extends BaseWidget
      */
     public function getColspan()
     {
-        return 1;
+        return 2;
     }
 
     /**

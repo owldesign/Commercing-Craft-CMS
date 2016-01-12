@@ -177,7 +177,7 @@ class CommercingPlugin extends BasePlugin
      */
     public function getSettingsHtml()
     {
-      return craft()->templates->render('commercing/settings', array(
+      return craft()->templates->render('commercing/plugin/settings', array(
         'settings' => $this->getSettings()
       ));
     }

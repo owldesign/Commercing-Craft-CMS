@@ -1,8 +1,16 @@
-{% includeCssResource "commercing/css/style.css" %}
+{% includeCssResource "commercing/css/commercing.css" %}
+{% includeCssResource "commercing/css/morris.css" %}
+{% includeJsResource "commercing/js/libs/raphael-min.js" %}
+{% includeJsResource "commercing/js/libs/morris.min.js" %}
+{% includeJsResource "commercing/js/commercing.js" %}
 
 {{ settings.someSetting }}
 
 <section id="commercing">
+
+	<div id="myfirstchart" style="height: 250px;"></div>
+
+	
 	<div class="panel">
 		<h1>$ {{ totalPrice }}</h1>
 		<p>Total sales</p>
